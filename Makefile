@@ -1,0 +1,2 @@
+dev-build:
+	go build
