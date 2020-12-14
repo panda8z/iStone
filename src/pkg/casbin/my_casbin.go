@@ -41,7 +41,7 @@ func Setup(db *gorm.DB, prefix string) *casbin.SyncedEnforcer {
 		panic(err)
 	}
 
-	log.SetLogger(&Logger{})
+	log.SetLogger(&CasbinLogger{})
 	e.EnableLog(true)
 	return e
 }

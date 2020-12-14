@@ -6,12 +6,11 @@ import (
 
 )
 
-// Logger is the implementation for a Logger using golang log.
-type Logger struct {
+type CasbinLogger struct {
 	enable int32
 }
 
-func (l *Logger) EnableLog(enable bool) {
+func (l *CasbinLogger) EnableLog(enable bool) {
 	i := 0
 	if enable {
 		i = 1
@@ -19,17 +18,17 @@ func (l *Logger) EnableLog(enable bool) {
 	atomic.StoreInt32(&(l.enable), int32(i))
 }
 
-func (l *Logger) IsEnabled() bool {
+func (l *CasbinLogger) IsEnabled() bool {
 	return atomic.LoadInt32(&(l.enable)) != 0
 }
 
-func (l *Logger) Print(v ...interface{}) {
+func (l *CasbinLogger) Print(v ...interface{}) {
 	if l.IsEnabled() {
 		logger.DefaultLogger.Log(logger.InfoLevel, v...)
 	}
 }
 
-func (l *Logger) Printf(format string, v ...interface{}) {
+func (l *CasbinLogger) Printf(format string, v ...interface{}) {
 	if l.IsEnabled() {
 		logger.DefaultLogger.Logf(logger.InfoLevel, format, v...)
 	}
