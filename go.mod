@@ -6,18 +6,24 @@ replace (
 	github.com/panda8z/istone/cmd => ./cmd
 	github.com/panda8z/istone/src/pkg/app => ./src/pkg/app
 	github.com/panda8z/istone/src/pkg/captcha => ./src/pkg/captcha
+	github.com/panda8z/istone/src/pkg/casbin => ./src/pkg/casbin
 	github.com/panda8z/istone/src/pkg/config => ./src/pkg/config
+	github.com/panda8z/istone/src/pkg/cronjob => ./src/pkg/cronjob
 	github.com/panda8z/istone/src/pkg/dbservice => ./src/pkg/dbservice
+	github.com/panda8z/istone/src/pkg/dto => ./src/pkg/dto
 	github.com/panda8z/istone/src/pkg/global => ./src/pkg/global
 	github.com/panda8z/istone/src/pkg/jwt => ./src/pkg/jwt
 	github.com/panda8z/istone/src/pkg/log => ./src/pkg/log
 	github.com/panda8z/istone/src/pkg/logger => ./src/pkg/logger
 	github.com/panda8z/istone/src/pkg/middleware => ./src/pkg/middleware
 	github.com/panda8z/istone/src/pkg/models => ./src/pkg/models
+	github.com/panda8z/istone/src/pkg/search => ./src/pkg/search
 	github.com/panda8z/istone/src/pkg/security => ./src/pkg/security
 	github.com/panda8z/istone/src/pkg/tools => ./src/pkg/tools
 	github.com/panda8z/istone/src/pkg/trace => ./src/pkg/trace
 	github.com/panda8z/istone/src/pkg/utils => ./src/pkg/utils
+
+	github.com/panda8z/istone/src/admin/models => ./src/admin
 )
 
 require (
