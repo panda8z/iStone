@@ -39,15 +39,18 @@ var rootCmd = &cobra.Command{
 }
 
 func init() {
+	initConfigCmd()
+	initMigrateCmd()
+	initApiCmd()
 	rootCmd.AddCommand(apiCmd)
+	rootCmd.AddCommand(configCmd)
 	rootCmd.AddCommand(migrateCmd)
 	rootCmd.AddCommand(versionCmd)
-	rootCmd.AddCommand(configCmd)
 }
 
 func tip() {
 	usageStr := `欢迎使用 ` + tools.Green(`istone `+global.Version) + ` 可以使用 ` + tools.Red(`-h`) + ` 查看命令`
-	usageStr1 := `也可以参考 http://doc.zhangwj.com/istone-site/guide/ksks.html 里边的【启动】章节`
+	usageStr1 := `也可以参考 《iStone开发者文档》 里边的【启动】章节`
 	fmt.Printf("%s\n", usageStr)
 	fmt.Printf("%s\n", usageStr1)
 }

@@ -34,7 +34,7 @@ var migrateCmd = &cobra.Command{
 func initMigrateCmd() {
 	migrateCmd.PersistentFlags().StringVarP(&configYml, "config", "c", "config/settings.yml", "Start server with provided configuration file")
 	migrateCmd.PersistentFlags().BoolVarP(&generate, "generate", "g", false, "generate migration file")
-	migrateCmd.PersistentFlags().BoolVarP(&iStone, "goAdmin", "a", false, "generate istone migration file")
+	migrateCmd.PersistentFlags().BoolVarP(&iStone, "iStone", "a", false, "generate istone migration file")
 }
 
 func runMigrateCmd() {

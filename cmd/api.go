@@ -3,6 +3,7 @@ package cmd
 import (
 	"context"
 	"fmt"
+	"github.com/panda8z/istone/src/admin/router"
 	"net/http"
 	"os"
 	"os/signal"
@@ -45,7 +46,7 @@ func initApiCmd() {
 	apiCmd.PersistentFlags().BoolVarP(&traceStart, "traceStart", "t", false, "start traceStart app dash")
 
 	//注册路由 fixme 其他应用的路由，在本目录新建文件放在init方法
-	//AppRouters = append(AppRouters, router.InitRouter)
+	AppRouters = append(AppRouters, router.InitRouter)
 }
 
 func setup() {
